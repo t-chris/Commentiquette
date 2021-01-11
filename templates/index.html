@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chris Tan</title>
+	<meta name="keywords" content="Chris Tan,Chris,Personal Website, Portfolio,Experience,University of Waterloo,Computer Engineering">
+	<meta name="author" content="Chris Tan">
+	<meta name="description" content="To err is human; but to to really foul things up you need a computer. Here's my attempt.">
+	<!--Bootstrap 4-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
+	<!--Font Awesome-->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.9.0/js/all.js" integrity="sha384-7Gk1S6elg570RSJJxILsRiq8o0CO99g1zjfOISrqjFUCjxHDn3TmaWoWOqt6eswF" crossorigin="anonymous"></script>
+  
+  <!--Lazy Darkmode.js-->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <!--Script-->
+  <script src="script.js"></script>
+
+  <!--New fonts:-->
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body style="padding-left: 10%; padding-right: 10%; padding-top: 5%">
+
+<!--Introduction-->
+<div class="jumbotron">
+    <h1 class="display-4">Commentiquette - Reach for the Top!</h1>
+    <p class="lead">Because a bot can generate better, more proper Internet comments than humans.</p>
+    <hr class="my-4">
+    <p>Made by a guy who resides on <a href="https://sobercoder.me/">sobercoder.me</a>. Contact me there and suggest better videos as datasets (preferably more than 10000 comments, and in English).</p>
+</div>
+<div class="container-fluid padding">
+  <br>
+  <h2 class="display">Inspiration</h1>
+  <p class="lead">Humbly inspired by Erik Hoffstad's brilliant internet series <a href="https://www.youtube.com/channel/UCyWDmyZRjrGHeKF-ofFsT5Q">Internet Comment Etiquette</a>, where Erik tries his damnest to promote proper internet comment etiquette. Commentiquette tries his best.</p>
+  <div class="text-center">
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/lvAPVhdRaJ0">
+    </iframe>
+  </div>
+  <h2 class="display">Video Models</h1>
+  <p class="lead">Right now, the catalogue has the best and the brightest YouTube videos our decade has to offer, and some Ranthony Rantano.</p>
+</div>
+<!--- Writing and Blog Cards -->
+<div class="container-fluid padding hidden">
+	<div class="row padding margin-style-third">
+    <div class="col-md-12 col-lg-6">
+      <div class="card" style="margin-top: 30px; margin-bottom: 20px;">
+        <img class="card-img-top" src="../static/banthony.jpg">
+        <div class="card-body">
+          <h4 class="card-title">Anthony Fantano - The Big Day (Review)</h4>
+          <p class="card-text">No better comments section to start off with than the melon lord and Mr. I Love My Wife. Hopefully Commentiquette comes up with better jokes; I know Kyle Kuzma sure did.</p>
+          <form action="{{ url_for('predict')}}"method="post">
+            <div class="form-group">
+              <label for="starting_string">Starting String:</label>
+              <!--The specific video id it comes from.-->
+              <input id="videoId" name="videoId" type="hidden" value="RjriHA-MLPg">
+              <input type="text" class="form-control" id="starting_string" name="starting_string" placeholder="Anthony...">
+              <button type="submit" class="btn btn-primary btn-block">Submit Starting String</button>
+              <br>
+              <textarea readOnly class="form-control" id="response" rows="3">{{ss}}</textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+      <div class="card" style="margin-top: 30px; margin-bottom: 20px;">
+        <img class="card-img-top" src="../static/kanye.jpg">
+        <div class="card-body">
+          <h4 class="card-title">Kanye West - Runaway</h4>
+          <p class="card-text">One of the most influential tracks of one of the most influential albums of the decade, Kanye dances the line between brooding confidence and profound vulnerability all packed into one, amazing audio journey.</p>
+          <form action="{{ url_for('predict')}}"method="post">
+            <div class="form-group">
+              <label for="starting_string">Starting String:</label>
+              <!--The specific video id it comes from.-->
+              <input id="videoId" name="videoId" type="hidden" value="Bm5iA4Zupek">
+              <input type="text" class="form-control" id="starting_string" name="starting_string" placeholder="Anthony...">
+              <button type="submit" class="btn btn-primary btn-block">Submit Starting String</button>
+              <br>
+              <textarea readOnly class="form-control" id="response" rows="3">{{ss}}</textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 col-lg-6">
+      <div class="card" style="margin-top: 30px; margin-bottom: 20px;">
+        <img class="card-img-top" src="../static/jesuswest.jpg">
+        <div class="card-body">
+          <h4 class="card-title">Kanye West - Follow God</h4>
+          <p class="card-text">The best track (it's not Use this Gospel let's be real) on Jesus is King. Comments are funny.</p>
+          <form action="{{ url_for('predict')}}"method="post">
+            <div class="form-group">
+              <label for="starting_string">Starting String:</label>
+              <!--The specific video id it comes from.-->
+              <input id="videoId" name="videoId" type="hidden" value="ivCY3Ec4iaU">
+              <input type="text" class="form-control" id="starting_string" name="starting_string" placeholder="Anthony...">
+              <button type="submit" class="btn btn-primary btn-block">Submit Starting String</button>
+              <br>
+              <textarea readOnly class="form-control" id="response" rows="3">{{ss}}</textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Under the Hood
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          It's a simple RNN model built in Tensorflow and Keras, containing three layers: an Embedding layer, a GRU layer, and a hidden (dense) layer. It's trained on datasets I make myself using the Youtube V3 API for comments.
+          <br>
+          The whole thing is put in some funky Flask framework, and tied together with some glue and sticks at the end.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            The Future
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          Obviously, it's in super-alpha or whatever 'super experimental' means; the loosely-held together Bootstrap 4 says it all. Right now, it only provides pre-trained models that I spend my precious CPU training for over a hundred epochs. My NVIDIA GeForce GTX 1650 isn't CUDA Enabled (or is, depending on which forum you read). In the future, I wish to provide functionality through the front-end that allows people to send in YouTube links for it to be trained later, if that's even realistically possible. I even installed cudNN, which required signing up for NVIDIA Developers and failing three Captchas.
+        </div>
+      </div>
+    </div>
+  </div>
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 mt-md-0 mt-3">
+        <hr class="clearfix w-100 pb-3">
+
+        <!-- Content -->
+        <h5 class=" text-center text-uppercase font-weight-bold">sobercoder.me</h5>
+        <p class="text-center">Hey there, you got pretty far. Click this <a href="https://youtu.be/tNOlyqLqmdE" target="_blank">link</a>.</p>
+
+      </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center">© 2021 Copyright:
+    <a href="https://sobercoder.me/"> sobercoder.me</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+</html>
