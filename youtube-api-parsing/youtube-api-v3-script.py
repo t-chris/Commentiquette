@@ -49,7 +49,7 @@ def main():
     api_service_name = "youtube"
     api_version = "v3"
     #It asks to use the api_key but doesn't seem to have one, choosing instead to use Auth 2.0. Here's me manually putting it in.
-    api_key = "AIzaSyB5-v61bkFWOx2uZCDnxtNJmJNObzEYtNM"
+    api_key = "your api key lol not mine lol damnit"
     # Get credentials and create an API client
     #flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
     #    client_secrets_file, scopes)
